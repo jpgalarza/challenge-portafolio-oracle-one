@@ -1,4 +1,4 @@
-header {
+.header-container {
   height: 60px;
   display: flex;
   justify-content: space-between;
@@ -12,6 +12,7 @@ header {
 
 .menu__title {
   font-size: 1rem;
+  margin: 10px;
 }
 
 .menu__list {

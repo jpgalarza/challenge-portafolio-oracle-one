@@ -3,13 +3,7 @@
 }
 
 .title__bio {
-  font-size: 1.375rem;
-}
-
-.title__subsection {
-  font-size: 0.875rem;
-  font-weight: 400;
-  margin: 10px 0;
+  text-align: left !important;
 }
 
 .title__network {

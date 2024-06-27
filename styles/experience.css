@@ -1,0 +1,29 @@
+.experience {
+  padding: 30px !important;
+}
+
+.experience__box {
+  padding-bottom: 50px;
+}
+
+.experience__box:last-child {
+  padding-bottom: 0;
+}
+
+.experience__img {
+  width: 100%;
+}
+
+.experience__title {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.experience__text {
+  font-weight: 500 !important;
+}
+
+.repo-btn {
+  color: var(--button-color);
+  background-color: transparent;
+}

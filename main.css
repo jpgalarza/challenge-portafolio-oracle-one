@@ -3,13 +3,20 @@
 @import url("styles/profile.css");
 @import url("styles/about.css");
 @import url("styles/skills.css");
+@import url("styles/hobbies.css");
+@import url("styles/academic.css");
+@import url("styles/experience.css");
+@import url("styles/contacto.css");
+@import url("styles/footer.css");
 
 :root{
    --body-color: #F5F5F5;
    --link-color: #000;
    --font-color: #464646;
    --primary-color: #EAF2FD;
+   --button-color: #2A7AE4;
    --white: #FFFFFF;
+   --grey: #C8C8C8;
 }
 
 * {
@@ -23,7 +30,6 @@ body {
     font-family: 'Raleway';
     background-color: var(--body-color);
     overflow-x: hidden;
-    /* line-height: 1; */
 }
 
 li {
@@ -36,86 +42,37 @@ a {
 
 .container {
     padding: 15px 15px;
+    max-width: 1300px;
 }
 
-/* ol, ul,li {
-    list-style: none;
-}
-a{
-    text-decoration: none;
-    color: var(--link-color);
-} */
-
-/*Sección Hobbies*/
-
-section.hobbies{
-    
+.section__titles {
+    margin-bottom: 15px;
+    font-size: 1.375rem;
+    text-align: center;
 }
 
-/* Experiencia Académica*/
-
-section.academic{
-
+.paragraph {
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin-bottom: 15px;
 }
 
-/* experiencia*/
-
-section.experience{
-
+.button {
+    height: 40px;
+    padding: 12px 16px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: 1px solid var(--button-color);
+    background-color: var(--button-color);
+    color: var(--white);
 }
-
-/*Contacto*/
-
-section.formcontato{
-
-}
-
-/*footeer*/
-
-section.footer{
-   
-}
-
-/* Vamos a desafiarnos trabajando con responsividad?
-Utiliza las referencias de los breakpoints @media abajo */
-
 
 /*Tablet*/
 @media (min-width: 768px) {
-
-/* Menú */
-
-/*title*/
-
-/*Skills*/
-
-/*Hobbies*/
-
-/*Formación Académica*/
-
-/*Experiencia Profesional*/
 
 }
 
 /*Mobile*/
 @media (min-width: 425px) {
-
-/*Menu*/
-
-/*Titulo*/
-
-/*Sección sobre mi*/
-
-/*Skills*/
-
-/*Hobbies*/
- 
-/*Formación Académica*/
-
-/*Experiencia Profesional*/
-
- /*Contacto*/
-
-/*Footer*/
 
 }

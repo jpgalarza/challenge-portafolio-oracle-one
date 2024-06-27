@@ -1,10 +1,10 @@
-.skills__line {
+.hobbies__line {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
 }
 
-.skills__box {
+.hobbies__box {
   display: flex;
   align-items: end;
   flex-grow: 1;
@@ -15,6 +15,6 @@
   width: 40%;
 }
 
-.skills__name {
+.hobbies__name {
   font-weight: 700;
 }

@@ -2,7 +2,6 @@
   background-color: var(--primary-color);
 }
 
-.about__paragraph {
-  margin: 15px 0;
-  font-size: 0.875rem;
+.about__title {
+  text-align: left !important;
 }
