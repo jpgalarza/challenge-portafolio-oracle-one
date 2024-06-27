@@ -1,41 +1,50 @@
 @import url("styles/normalize.css");
+@import url("styles/header.css");
+@import url("styles/profile.css");
+@import url("styles/about.css");
+@import url("styles/skills.css");
 
 :root{
    --body-color: #F5F5F5;
    --link-color: #000;
+   --font-color: #464646;
+   --primary-color: #EAF2FD;
+   --white: #FFFFFF;
 }
 
-body {
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    background-color: var(--body-color) ;
+    color: var(--font-color);
+  }
+
+body {
     font-family: 'Raleway';
-    line-height: 1;
+    background-color: var(--body-color);
+    overflow-x: hidden;
+    /* line-height: 1; */
 }
-ol, ul,li {
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding: 15px 15px;
+}
+
+/* ol, ul,li {
     list-style: none;
 }
 a{
     text-decoration: none;
     color: var(--link-color);
-}
-
-/*Sección Menu*/
-
-section.menu{
-
-}
-
-/*Sección Title*/
-
-section.title{
-
-}
-
-/*Sección About*/
-
-section.about{
-
-}
+} */
 
 /*Sección Hobbies*/
 

@@ -1,0 +1,23 @@
+header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.menu__title {
+  font-size: 1rem;
+}
+
+.menu__list {
+  display: none;
+}
+
+.menu__list__item__contato {
+  font-size: 0.875rem;
+}
