@@ -12,3 +12,21 @@
   font-size: 0.875rem;
   font-weight: 600;
 }
+
+.title__network img {
+  margin-left: 3px;
+}
+
+
+@media screen and (min-width: 576px) {
+  .profile-container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .title__profile {
+    width: 146px;
+    height: 146px;
+    margin-left: 60px;
+  }
+}

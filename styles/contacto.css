@@ -31,3 +31,10 @@
   height: 130px;
   margin-bottom: 30px;
 }
+
+
+@media screen and (min-width: 576px) {
+  .formcontato {
+    padding: 0 !important;
+  }
+}

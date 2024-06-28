@@ -18,3 +18,10 @@
 .skills__name {
   font-weight: 700;
 }
+
+
+@media screen and (min-width: 576px) {
+  .skills__box {
+    width: 26%;
+  }
+}

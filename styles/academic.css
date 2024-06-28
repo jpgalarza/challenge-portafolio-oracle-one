@@ -23,3 +23,20 @@
   font-weight: 500 !important;
 }
 
+
+@media screen and (min-width: 576px) {
+  .academic {
+    padding: 0 !important;
+  }
+
+  .academic__courses {
+    display: flex;
+    gap: 15px;
+  }
+
+  .academic__courses__list {
+    width: 26%;
+    flex-grow: 1;
+  }
+}
+

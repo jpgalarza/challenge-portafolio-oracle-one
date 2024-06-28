@@ -27,3 +27,10 @@
   color: var(--button-color);
   background-color: transparent;
 }
+
+
+@media screen and (min-width: 576px) {
+  .experience {
+    padding: 0 !important;
+  }
+}

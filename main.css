@@ -41,7 +41,7 @@ a {
 }
 
 .container {
-    padding: 15px 15px;
+    padding: 16px;
     max-width: 1300px;
 }
 
@@ -67,12 +67,13 @@ a {
     color: var(--white);
 }
 
-/*Tablet*/
-@media (min-width: 768px) {
 
+@media screen and (min-width: 576px) {
+    .container {
+        padding: 32px;
+    }
 }
-
-/*Mobile*/
-@media (min-width: 425px) {
-
-}
+   
+  
+  
+  @media screen and (min-width: 992px) {}

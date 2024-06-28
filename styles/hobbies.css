@@ -18,3 +18,10 @@
 .hobbies__name {
   font-weight: 700;
 }
+
+
+@media screen and (min-width: 576px) {
+  .hobbies__box {
+    width: 26%;
+  }
+}
