@@ -1,5 +1,5 @@
 .experience {
-  padding: 30px !important;
+  padding: 30px;
 }
 
 .experience__box {
@@ -24,13 +24,39 @@
 }
 
 .repo-btn {
-  color: var(--button-color);
-  background-color: transparent;
+  color: var(--button-color) !important;
+  background-color: transparent !important;
 }
 
 
 @media screen and (min-width: 576px) {
   .experience {
-    padding: 0 !important;
+    padding: 0;
+  }
+}
+
+
+@media screen and (min-width: 992px) {
+  .experience__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .experience__img {
+    width: 67%;
+  }
+
+  .experience__info {
+    flex-grow: 1;
+  }
+
+  .experience__title {
+    font-size: 1.375rem;
+  }
+
+  .reverse {
+    flex-direction: row-reverse;
   }
 }

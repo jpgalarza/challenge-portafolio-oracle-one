@@ -1,5 +1,5 @@
 .header-container {
-  height: 60px;
+  height: 56px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,9 +16,40 @@
 }
 
 .menu__list {
+  font-size: 0.875rem;
+}
+
+.menu__list>li:not(:last-child){
   display: none;
 }
 
-.menu__list__item__contato {
-  font-size: 0.875rem;
+@media screen and (min-width: 576px) {
+  .header-container {
+    padding: 0 32px !important;
+  }
+
+  .menu__list {
+    font-size: 1rem;
+  }
+
+  .menu__list>li:last-child {
+    font-weight: 700;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .header-container {
+    height: 88px;
+    padding: 0 16px !important;
+  }
+
+  .menu__list {
+    display: flex;
+    gap: 32px;
+  }
+
+  .menu__list>li:not(:last-child){
+    display: block;
+    font-weight: 500;
+  }
 }

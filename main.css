@@ -42,7 +42,6 @@ a {
 
 .container {
     padding: 16px;
-    max-width: 1300px;
 }
 
 .section__titles {
@@ -75,5 +74,18 @@ a {
 }
    
   
-  
-  @media screen and (min-width: 992px) {}
+@media screen and (min-width: 992px) {
+    .container {
+        padding: 32px 16px;
+        max-width: 1136px;
+        margin: 0 auto;
+    }
+
+    .section__titles {
+        font-size: 2rem;
+    }
+
+    .paragraph {
+        font-size: 1rem;
+    }
+}

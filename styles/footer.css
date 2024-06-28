@@ -2,11 +2,12 @@ footer {
   background-color: var(--white);
 }
 
-.footer-container {
-  padding: 33px 0 !important;
+footer>.container {
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
-.footer-container>p {
+footer p {
   text-align: center;
   font-weight: 500;
 }

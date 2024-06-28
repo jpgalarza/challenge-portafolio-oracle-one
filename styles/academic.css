@@ -1,5 +1,5 @@
 .academic {
-  padding: 30px !important;
+  padding: 30px;
   background-color: var(--primary-color);
 }
 
@@ -16,7 +16,7 @@
 }
 
 .academic__courses__item__img>img {
-  height: 58px;
+  height: 50%;
 }
 
 .academic__courses__item__subtitle {
@@ -26,7 +26,7 @@
 
 @media screen and (min-width: 576px) {
   .academic {
-    padding: 0 !important;
+    padding: 0;
   }
 
   .academic__courses {
@@ -37,6 +37,17 @@
   .academic__courses__list {
     width: 26%;
     flex-grow: 1;
+  }
+}
+
+
+@media screen and (min-width: 992px) {
+  .academic__courses__item__img {
+    height: 286px;
+  }
+
+  .academic__courses__item__title {
+    font-size: 1.375rem;
   }
 }
 
