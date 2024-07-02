@@ -1,8 +1,8 @@
 export const nameValidation = (input, value) => {
-  if (value.trim().length < 2) {
+  if (value.trim().length < 2 || value.trim().length > 50) {
     input.setCustomValidity('error')
   };
-}
+};
 
 
 export const emailValidation = (input, value) => {
@@ -16,11 +16,18 @@ export const emailValidation = (input, value) => {
   if(!regexMail.test(valueTrim)) {
     input.setCustomValidity('error');
   }
-}
+};
 
 
 export const subjectValidation = (input, value) => {
-  if (value.trim().length < 4) {
+  if (value.trim().length < 4 || value.trim().length > 50) {
+    input.setCustomValidity('error');
+  };
+};
+
+
+export const messageValidation = (input, value) => {
+  if (value.trim().length < 10 || value.trim().length > 300) {
     input.setCustomValidity('error');
   };
 }

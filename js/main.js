@@ -1,71 +1,23 @@
-import { emailValidation, nameValidation, subjectValidation } from "../helpers/inputValidations.js";
 import { messages, errorTypes } from "./customErrors.js";
+import { 
+    emailValidation, 
+    messageValidation, 
+    nameValidation, 
+    subjectValidation 
+  } from "../helpers/inputValidations.js";
 
 document.addEventListener("DOMContentLoaded", load);
+
 
 function load() {
   getData();
   document.querySelectorAll('.formcontato__input').forEach(input => {
-    input.addEventListener('blur', validateInput);
-    input.addEventListener('invalid', (e) => { e.preventDefault(), validateInput(e) });
+    input.addEventListener('blur', (e) => { validateInput(e), enableFormButton() });
+    input.addEventListener('invalid', (e) => { e.preventDefault(); validateInput(e); });
   });
-  document.querySelector('#contacto').addEventListener('submit', formValidations)
+  document.querySelector('#contacto').addEventListener('submit', submit);
 };
 
-
-const formValidations = (e) => {
-  e.preventDefault();
-}
-
-
-const validateInput = (e) => {
-  const input = e.target;
-  const errorMessageNode = input.nextElementSibling;
-  let mensaje;
-
-  input.classList.remove('input-error');
-  errorMessageNode.classList.remove('active-error');
-  errorMessageNode.textContent = '';
-
-  //Control de validaciones HTML (sin custonError activo) mediante API "ValidityState"
-  if(!input.validity.valid && !input.validity.customError) {
-    errorTypes.forEach((error) => {
-      if (input.validity[error]) {
-        mensaje = messages[input.name][error];
-      }
-    });
-
-    input.classList.add('input-error');
-    errorMessageNode.classList.add('active-error');
-    errorMessageNode.textContent = mensaje;
-    return;
-  };
-
-  //Validaciones en JS utilizando método de API "HTMLInputElement" para setear el customError de API "ValidityState"
-  input.setCustomValidity('')
-
-  const value = input.value;
-
-  if(input.name == "nombre") {
-    nameValidation(input, value);
-  }
-
-  if(input.name === 'email') {
-    emailValidation(input, value);
-  }
-
-  if (input.name == "asunto") {
-    subjectValidation(input, value);
-  }
-  
-  if(input.validity.customError) {
-    mensaje = messages[input.name].customError;
-  
-    input.classList.add('input-error');
-    errorMessageNode.classList.add('active-error');
-    errorMessageNode.textContent = mensaje;
-  }
-}
 
 
 const getData = async () => {
@@ -73,8 +25,8 @@ const getData = async () => {
   const { skills, hobbies, courses, experiences } = await response.json();
   loadSkills(skills);
   loadHobbies(hobbies);
-  loadAcademic(courses)
-  loadExperience(experiences)
+  loadAcademic(courses);
+  loadExperience(experiences);
 };
 
 
@@ -102,7 +54,7 @@ const loadSkills = (skills) => {
 
   container.appendChild(skillsLine);
   skillsSection.appendChild(container);
-} 
+};
 
 
 const loadHobbies = (hobbies) => {
@@ -120,7 +72,7 @@ const loadHobbies = (hobbies) => {
   });
 
   hobbiesSection.innerHTML = template + endOfTemplate;
-}
+};
 
 
 const loadAcademic = (courses) => {
@@ -146,7 +98,7 @@ const loadAcademic = (courses) => {
   });
 
   academicSection.innerHTML = template + endOfTemplate;
-}
+};
 
 
 const loadExperience = (experiences) => {
@@ -180,4 +132,98 @@ const loadExperience = (experiences) => {
   });
 
   experienceSection.innerHTML = template + endOfTemplate;
-}
+};
+
+
+const validateInput = (e) => { 
+  const input = e.target || e; //Reutilizacion de función para poder recibir el elemento input o su evento.
+  const errorMessageNode = input.nextElementSibling;
+  let mensaje;
+
+  input.classList.remove('input-error');
+  errorMessageNode.classList.remove('active-error');
+  errorMessageNode.textContent = '';
+
+  //Control de validaciones HTML (sin custonError activo) mediante API "ValidityState"
+  if(!input.validity.valid && !input.validity.customError) {
+    errorTypes.forEach((error) => {
+      if (input.validity[error]) {
+        mensaje = messages[input.name][error];
+      }
+    });
+
+    input.classList.add('input-error');
+    errorMessageNode.classList.add('active-error');
+    errorMessageNode.textContent = mensaje;
+    return;
+  };
+
+  //Validaciones en JS utilizando método de API "HTMLInputElement" para setear el customError de API "ValidityState"
+  input.setCustomValidity('');
+
+  const value = input.value;
+
+  if(input.name == "nombre") {
+    nameValidation(input, value);
+  };
+
+  if(input.name === 'email') {
+    emailValidation(input, value);
+  };
+
+  if (input.name == "asunto") {
+    subjectValidation(input, value);
+  };
+
+  if (input.name == "mensaje") {
+    messageValidation(input, value);
+  };
+  
+  if(input.validity.customError) {
+    mensaje = messages[input.name].customError;
+  
+    input.classList.add('input-error');
+    errorMessageNode.classList.add('active-error');
+    errorMessageNode.textContent = mensaje;
+  };
+};
+
+
+const enableFormButton = () => {
+  const button = document.querySelector('#contacto form[name="form"] button');
+  let enable = true;
+  
+  document.querySelectorAll('.formcontato__input').forEach(input => {
+    if (!input.validity.valid) {
+      enable = false;
+    };
+  });
+
+  if(enable) {
+    button.classList.remove('btn-disabled');
+    button.disabled = false;
+  }else {
+    button.classList.add('btn-disabled');
+    button.disabled = true;
+  };
+};
+
+
+const submit = (e) => {
+  e.preventDefault();
+  let validatedForm = true;
+
+  document.querySelectorAll('.formcontato__input').forEach(input => {
+    validateInput(input);
+    if (!input.validity.valid) {
+      validatedForm = false;
+    };
+  });
+  
+  if(validatedForm) {
+    const form = document.querySelector('#contacto form[name="form"]');
+    console.log('El formulario se enviara');
+  }else {
+    console.log('El formulario NO SE ENVÍA');
+  };
+};

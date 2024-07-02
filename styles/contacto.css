@@ -37,7 +37,8 @@
 }
 
 .error-message {
-  background-color: transparent; 
+  display: none;
+  background-color: #ff0000; 
   color: var(--white); 
   position: absolute; 
   top: -19px;
@@ -48,7 +49,7 @@
 }
 
 .active-error {
-  background-color: #ff0000;
+  display: block;
 }
 
 .formcontato__input:focus {
