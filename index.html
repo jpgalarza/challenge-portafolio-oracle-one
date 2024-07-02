@@ -29,7 +29,7 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#hobbies">Hobbies</a></li>
             <li><a href="#formacion">Formación</a></li>
-            <li><a href="#xp">Proyectos</a></li>
+            <li><a href="#experiencia">Proyectos</a></li>
             <li>
               <a href="#contacto">Contacto@fulana.com</a>
             </li>
@@ -201,7 +201,7 @@
         </div> -->
       </section>
       <!-- Sección de Formación académica -->
-      <section class="academic" id="academic">
+      <section class="academic" id="formacion">
         <!-- <div class="container">
           <h2 class="section__titles">Formación académica</h2>
           <div class="academic__courses">
@@ -243,7 +243,7 @@
         </div> -->
       </section>
       <!-- Sección de Experiencia Profesional/Proyectos-->
-      <section class="experience" id="experience">
+      <section class="experience" id="experiencia">
         <!-- <div class="container">
           <h2 class="section__titles">Experiencia Profesional</h2>
           <div class="experience__box">
@@ -341,32 +341,50 @@
               lo antes posible.
             </h3>
             <form name="form">
-              <input
-                class="formcontato__input"
-                type="text"
-                name="nombre"
-                placeholder="Nombre"
-              />
-              <input
-                class="formcontato__input"
-                type="email"
-                name="email"
-                placeholder="E-mail"
-              />
-              <input
-                class="formcontato__input"
-                type="text"
-                name="asunto"
-                placeholder="Assunto"
-              />
-              <textarea
-                class="formcontato__input formcontato__textarea"
-                rows="5"
-                cols="40"
-                id="mensagem"
-                name="mensaje"
-                placeholder="Mensaje"
-              ></textarea>
+              <div class="input-container">
+                <input
+                  class="formcontato__input"
+                  type="text"
+                  name="nombre"
+                  placeholder="Nombre"
+                  minlength="2"
+                  required
+                />
+                <p class="error-message"></p>
+              </div>
+              <div class="input-container">
+                <input
+                  class="formcontato__input"
+                  type="email"
+                  name="email"
+                  placeholder="E-mail"
+                  minlength="3"
+                  required
+                />
+                <p class="error-message"></p>
+              </div>
+              <div class="input-container">
+                <input
+                  class="formcontato__input"
+                  type="text"
+                  name="asunto"
+                  placeholder="Asunto"
+                  minlength="4"
+                  required
+                />
+                <p class="error-message"></p>
+              </div>
+              <div class="input-container">
+                <textarea
+                  class="formcontato__input formcontato__textarea"
+                  rows="5"
+                  cols="40"
+                  id="mensage"
+                  name="mensaje"
+                  placeholder="Mensaje"
+                ></textarea>
+                <p class="error-message"></p>
+              </div>
               <button type="submit" class="button">Enviar mensaje</button>
             </form>
           </div>
@@ -381,6 +399,6 @@
       </footer>
     </main>
     <!-- Script del documento JavaScript -->
-    <script src="index.js"></script>
+    <script src="./js/main.js" type="module"></script>
   </body>
 </html>

@@ -16,20 +16,43 @@
   font-weight: 500;
 }
 
+.input-container {
+  position: relative;
+  margin-top: 30px;
+}
+
 .formcontato__input {
   height: 56px;
   background-color: var(--white);
   border-radius: 4px;
-  border: none;
+  border: 2px solid transparent;
   border-bottom: 2px solid var(--grey);
   width: 100%;
-  margin-top: 30px;
   padding: 15px 10px;
   outline: none;
 }
 
+.input-error {
+  border: 2px solid #ff0000;
+}
+
+.error-message {
+  background-color: transparent; 
+  color: var(--white); 
+  position: absolute; 
+  top: -19px;
+  left: 10px;
+  font-size: 0.75rem; 
+  border-radius: 5px; 
+  padding: 4px;
+}
+
+.active-error {
+  background-color: #ff0000;
+}
+
 .formcontato__input:focus {
-  border-color: var(--button-color);
+  border-bottom: 2px solid var(--button-color);
 }
 
 .formcontato__textarea {

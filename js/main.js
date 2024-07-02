@@ -1,8 +1,71 @@
+import { emailValidation, nameValidation, subjectValidation } from "../helpers/inputValidations.js";
+import { messages, errorTypes } from "./customErrors.js";
+
 document.addEventListener("DOMContentLoaded", load);
 
 function load() {
   getData();
+  document.querySelectorAll('.formcontato__input').forEach(input => {
+    input.addEventListener('blur', validateInput);
+    input.addEventListener('invalid', (e) => { e.preventDefault(), validateInput(e) });
+  });
+  document.querySelector('#contacto').addEventListener('submit', formValidations)
 };
+
+
+const formValidations = (e) => {
+  e.preventDefault();
+}
+
+
+const validateInput = (e) => {
+  const input = e.target;
+  const errorMessageNode = input.nextElementSibling;
+  let mensaje;
+
+  input.classList.remove('input-error');
+  errorMessageNode.classList.remove('active-error');
+  errorMessageNode.textContent = '';
+
+  //Control de validaciones HTML (sin custonError activo) mediante API "ValidityState"
+  if(!input.validity.valid && !input.validity.customError) {
+    errorTypes.forEach((error) => {
+      if (input.validity[error]) {
+        mensaje = messages[input.name][error];
+      }
+    });
+
+    input.classList.add('input-error');
+    errorMessageNode.classList.add('active-error');
+    errorMessageNode.textContent = mensaje;
+    return;
+  };
+
+  //Validaciones en JS utilizando método de API "HTMLInputElement" para setear el customError de API "ValidityState"
+  input.setCustomValidity('')
+
+  const value = input.value;
+
+  if(input.name == "nombre") {
+    nameValidation(input, value);
+  }
+
+  if(input.name === 'email') {
+    emailValidation(input, value);
+  }
+
+  if (input.name == "asunto") {
+    subjectValidation(input, value);
+  }
+  
+  if(input.validity.customError) {
+    mensaje = messages[input.name].customError;
+  
+    input.classList.add('input-error');
+    errorMessageNode.classList.add('active-error');
+    errorMessageNode.textContent = mensaje;
+  }
+}
 
 
 const getData = async () => {
@@ -61,7 +124,7 @@ const loadHobbies = (hobbies) => {
 
 
 const loadAcademic = (courses) => {
-  const academicSection = document.querySelector('#academic');
+  const academicSection = document.querySelector('#formacion');
   let template = `<div class="container">
                     <h2 class="section__titles">Formación académica</h2>
                     <div class="academic__courses">`;
@@ -87,7 +150,7 @@ const loadAcademic = (courses) => {
 
 
 const loadExperience = (experiences) => {
-  const experienceSection = document.querySelector('#experience');
+  const experienceSection = document.querySelector('#experiencia');
   let template = '<div class="container"><h2 class="section__titles">Experiencia Profesional</h2>';
   const endOfTemplate = '</div></div>';
 
