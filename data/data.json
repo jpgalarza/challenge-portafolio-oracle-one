@@ -1,53 +1,41 @@
 {
   "skills": [ 
-    {"name": "HTML 5", "imageUrl": "assets/htlm.png"},
     {"name": "Javascript", "imageUrl": "assets/js_icon.png"},
-    {"name": "PHP", "imageUrl": "assets/php_icon.png"},
-    {"name": "Node JS", "imageUrl": "assets/nodejs_icon.png"},
+    {"name": "HTML 5", "imageUrl": "assets/htlm.png"},
+    {"name": "CSS", "imageUrl": "assets/css_icon.png"},
     {"name": "React", "imageUrl": "assets/react_icon.png"},
-    {"name": "CSS", "imageUrl": "assets/css_icon.png"}
+    {"name": "Node JS", "imageUrl": "assets/nodejs_icon.png"},
+    {"name": "PHP", "imageUrl": "assets/php_icon.png"}
   ],
   "hobbies": [ 
-    {"name": "Patinaje", "imageUrl": "assets/skate_icon.png"},
-    {"name": "Tocar bajo", "imageUrl": "assets/guitar_icon.png"},
-    {"name": "Oir música", "imageUrl": "assets/headphones_icon.png"},
-    {"name": "Ver séries", "imageUrl": "assets/tv_icon.png"},
-    {"name": "Cocinar", "imageUrl": "assets/forkspoon_icon.png"},
-    {"name": "Tomar fotos", "imageUrl": "assets/camera_icon.png"}
+    {"name": "Tocar guitarra", "imageUrl": "assets/guitar_icon.png"},
+    {"name": "Ver séries", "imageUrl": "assets/tv_icon.png"}
   ],
   "courses": [ 
-    {"title": "Análisis de datos", "subtitle": "2018 - UFPR","imageUrl": "assets/ufpr_logo.png"},
-    {"title": "Formación en UX Design", "subtitle": "l2019 - Alura","imageUrl": "assets/alura_logo.png"},
-    {"title": "Posgrado en diseño", "subtitle": "En curso - UFRJ","imageUrl": "assets/ufrj_logo.png"}
+    {"title": "Front End Developer", "subtitle": "Oracle Next Education - Alura","imageUrl": "assets/alura_logo.png"},
+    {"title": "Cursos de Desarrollo Web", "subtitle": "Educación IT","imageUrl": "assets/educacionit.png"}
   ],
   "experiences": [ 
     {
       "title": "Encriptador de texto", 
-      "xpText": "Challenge Alura Codificador",
-      "repositoryLink": "https://github.com/alura-challenges/challenge-one-encriptador-latam", 
-      "demoLink": "",
-      "imageUrl": "assets/decod_print.png"
+      "xpText": "Challenge Alura - Oracle Next Education",
+      "repositoryLink": "https://github.com/jpgalarza/challenge-encriptador-oracle-one", 
+      "demoLink": "https://jpgalarza.github.io/challenge-encriptador-oracle-one/",
+      "imageUrl": "assets/encriptador.png"
     },
     {
-      "title": "Juego creado con HTML y JavaScript", 
-      "xpText": "Challenge Oracle",
-      "repositoryLink": "https://github.com/alura-challenges/challenge-one-juego-ahorcado", 
+      "title": "Proyecto AluraGeek", 
+      "xpText": "Challenge Alura - Oracle Next Education",
+      "repositoryLink": "https://github.com/jpgalarza/challenge-alurageek-oracle-one", 
       "demoLink": "",
-      "imageUrl": "assets/forca_print.png"
+      "imageUrl": "assets/alurageek.png"
     },
     {
-      "title": "Encriptador de texto", 
-      "xpText": "Challenge Oracle",
-      "repositoryLink": "https://github.com/alura-challenges/challenge-one-encriptador-latam", 
+      "title": "Proyecto AluraFlix", 
+      "xpText": "Challenge Alura - Oracle Next Education",
+      "repositoryLink": "https://github.com/jpgalarza/challenge-aluraflix-oracle-one", 
       "demoLink": "",
-      "imageUrl": "assets/secretcode_print.png"
-    },
-    {
-      "title": "Juego creado con HTML, CSS y JavaScript", 
-      "xpText": "Challenge Oracle",
-      "repositoryLink": "https://github.com/alura-challenges/challenge-one-juego-ahorcado", 
-      "demoLink": "",
-      "imageUrl": "assets/forca2_print.png"
+      "imageUrl": "assets/aluraflix.png"
     }
   ]
 }
