@@ -223,7 +223,7 @@ const submit = (e) => {
   if(validatedForm) {
     const form = document.querySelector('#contacto form[name="form"]');
     console.log('El formulario SE ENVÍA');
-    form.submit();
+    /* form.submit(); */
   }else {
     console.log('El formulario NO SE ENVÍA');
   };
