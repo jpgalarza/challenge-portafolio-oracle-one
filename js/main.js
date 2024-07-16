@@ -222,9 +222,25 @@ const submit = (e) => {
   
   if(validatedForm) {
     const form = document.querySelector('#contacto form[name="form"]');
-    console.log('El formulario SE ENVÍA');
-    /* form.submit(); */
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Email enviado exitosamente!!",
+      showConfirmButton: false,
+      timer: 1500
+    });
+
+    setTimeout(() => {
+      form.submit();
+    }, 1600);
+    
   }else {
-    console.log('El formulario NO SE ENVÍA');
+    Swal.fire({
+      position: "center",
+      icon: "error",
+      title: "Corregir errores en los campos",
+      showConfirmButton: false,
+      timer: 1500
+    });
   };
 };
