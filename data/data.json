@@ -17,25 +17,32 @@
   ],
   "experiences": [ 
     {
-      "title": "Encriptador de texto", 
+      "title": "Challenge Encriptador de texto", 
       "xpText": "Challenge Alura - Oracle Next Education",
       "repositoryLink": "https://github.com/jpgalarza/challenge-encriptador-oracle-one", 
-      "demoLink": "https://jpgalarza.github.io/challenge-encriptador-oracle-one/",
+      "demoLink": "https://jpgalarza.github.io/challenge-encriptador-oracle-one",
       "imageUrl": "assets/encriptador.png"
     },
     {
-      "title": "Proyecto AluraGeek", 
+      "title": "Challenge AluraGeek", 
       "xpText": "Challenge Alura - Oracle Next Education",
       "repositoryLink": "https://github.com/jpgalarza/challenge-alurageek-oracle-one", 
-      "demoLink": "",
+      "demoLink": "https://challenge-alurageek-one.netlify.app",
       "imageUrl": "assets/alurageek.png"
     },
     {
-      "title": "Proyecto AluraFlix", 
+      "title": "Challenge AluraFlix", 
       "xpText": "Challenge Alura - Oracle Next Education",
       "repositoryLink": "https://github.com/jpgalarza/challenge-aluraflix-oracle-one", 
-      "demoLink": "",
+      "demoLink": "https://challenge-aluraflix-one.netlify.app",
       "imageUrl": "assets/aluraflix.png"
+    },
+    {
+      "title": "Proyecto Task-App", 
+      "xpText": "UTN - Argentina Programa 4.0",
+      "repositoryLink": "https://github.com/jpgalarza/task-app-react-utn", 
+      "demoLink": "https://task-app-utn.netlify.app",
+      "imageUrl": "assets/task-app.png"
     }
   ]
 }
